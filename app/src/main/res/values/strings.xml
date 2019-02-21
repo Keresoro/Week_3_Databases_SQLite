@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Week_4_Android_6_Permissions</string>
+
+    <string name="Add">Add</string>
+    <string name="Search">Search</string>
+    <string name="Update">Uptade</string>
+    <string name="Delete">Delete</string>
+</resources>
