@@ -1,72 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         tools:context=".MainActivity">
 
 
     <TextView
-            android:id="@+id/AddthisID"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="ID"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"/>
-    <EditText android:id="@+id/BId" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            android:id="@+id/AddthisID"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:textSize="12pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BId"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+            android:id="@+id/BId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/AddthisID"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-            android:id="@+id/AddthisTitle"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:text="Title"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"/>
-    <EditText android:id="@+id/BTitle" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <TextView
-            android:id="@+id/AddthisArtist"
-            android:layout_width="fill_parent"
+            android:id="@+id/AddthisTitle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textSize="12pt"
+            app:layout_constraintTop_toBottomOf="@id/AddthisID"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BId"/>
+
+    <EditText
+            android:id="@+id/BTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AddthisID"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/AddthisID"/>
+
+    <TextView
             android:text="Artist"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"/>
-    <EditText android:id="@+id/BArtist" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            android:id="@+id/AddthisArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12pt"
+            app:layout_constraintTop_toBottomOf="@id/BTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BTitle"/>
+
+    <EditText
+            android:id="@+id/BArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/BTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/AddthisArtist"/>
+
     <TextView
+            android:text="Year"
             android:id="@+id/AddThisYear"
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="year"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"/>
-    <EditText android:id="@+id/BYear" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            android:textSize="12pt"
+            app:layout_constraintTop_toBottomOf="@id/BArtist"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/BArtist"/>
+
+    <EditText
+            android:id="@+id/BYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/BArtist"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/AddThisYear"/>
 
     <Button
-            android:id="@+id/Add"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Add"/>
-
-    <Button
-            android:id="@+id/Search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Search"/>
-
-    <Button
-            android:id="@+id/Uptade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Update"/>
-
-    <Button
-            android:id="@+id/Delete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Delete"/>
+            android:id="@+id/btn1"
+            android:text="@string/sayHello"
+            app:layout_constraintRight_toRightOf="parent"
 
 
-</LinearLayout>
+    />
 
+</android.support.constraint.ConstraintLayout>
+
+
+<EditText android:id="@+id/BYear" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+<Button
+android:id="@+id/Add"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/Add"/>
+
+<Button
+android:id="@+id/Search"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/Search"/>
+
+<Button
+android:id="@+id/Uptade"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/Update"/>
+
+<Button
+android:id="@+id/Delete"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/Delete"/>

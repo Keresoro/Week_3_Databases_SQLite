@@ -1,4 +1,4 @@
-package com.example.week_4_android_6_permissions
+package com.example.Week_3_Databases_SQLite
 
 import org.junit.Test
 

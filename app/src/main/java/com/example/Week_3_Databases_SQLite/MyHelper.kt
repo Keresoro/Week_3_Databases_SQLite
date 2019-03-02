@@ -1,4 +1,4 @@
-package com.example.week_4_android_6_permissions
+package com.example.Week_3_Databases_SQLite
 
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteDatabase
@@ -31,7 +31,7 @@ class MyHelper(ctx:Context) : SQLiteOpenHelper(ctx,"TestDB", null, 1) {
         val cursor = db.rawQuery("SELECT * FROM People WHERE Id=?", arrayOf<String>(Id.toString()) )
 
             if (cursor.moveToFirst()) {
-                val p = Song ( //TODO CREATE A SONG OBJECT! A CLASS THAT HAVE -> data class Point(val x:Int, val y: Int) <- SEE WEEK 1 DATA CLASS!
+                val p = Song ( //TODO CREATE A SONG OBJECT! A CLASS THAT HAVE -> data class Point(val x:Int, val y: Int) <- SEE WEEK 1 DATA CLASS!!
                     cursor.getString(cursor.getColumnIndex("Title")),
                     cursor.getString(cursor.getColumnIndex("Artist")),
                     cursor.getLong(cursor.getColumnIndex("Year"))
