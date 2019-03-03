@@ -2,6 +2,7 @@ package com.example.Week_3_Databases_SQLite
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -41,5 +42,10 @@ class MainActivity : AppCompatActivity() {
             val id = BId.text.toString().toLong()
             val delete = helper.delete(id)
         }
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }
